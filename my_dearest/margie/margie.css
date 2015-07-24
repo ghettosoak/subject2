@@ -1,0 +1,62 @@
+@import url(../../carrier/type/alexbrush/stylesheet.css);
+::selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white; }
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: Georgia, Serif;
+  font-size: 1.2em;
+  line-height: 1.7rem;
+  color: #3C3C3F; }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: .85em;
+    line-height: 1.5rem; } }
+.master {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px; }
+
+p {
+  margin: 0px 0px 1rem; }
+  p span {
+    font-family: alex_brushregular;
+    font-size: 36px; }
+  p a {
+    color: #3C3C3F; }
+
+.top, .middle, .bottom {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-left: 10%;
+  border-left: 1px #ccc solid; }
+  .top .put, .middle .put, .bottom .put {
+    margin: auto;
+    max-width: 1024px;
+    height: 100%;
+    position: relative; }
+
+.top {
+  padding: 50px 30% 25px 10%;
+  border-bottom: 1px #ccc solid; }
+
+.middle {
+  padding: 50px 30% 25px 10%; }
+
+.bottom {
+  padding: 20px 30% 100px 10%; }
+
+@-moz-document url-prefix() {}

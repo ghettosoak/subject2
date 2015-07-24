@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <!-- many thanks to robert w. stewart at torontographic.com for getting me started on the right foot here -->
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1 maximum-scale=1.0" />  
+
+    <title>YOU ARE 18 YEARS OLD HOLY SHIT</title>
+
+    <link href="css/master.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.parallaxSwipe.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+    var $tehWidth
+
+      $(document).ready(function () {
+
+        $tehWidth = $(window).width();
+
+        
+
+        
+
+        $(document).bind("dragstart", function() { return false; });
+       
+        $(function() { 
+          $("#parallax").parallaxSwipe( { HORIZ: true, LAYER:[.8,4.2], SPEED_SPRING:0.1 });
+          // var layerWidth = $('#parallax').parallaxSwipe.getSize();
+          var layerWidth = $tehWidth * 10
+
+          $('#parallax .panel').css('width', function(){
+            return $tehWidth
+          })
+
+          // $('#layer1').css('width',layerWidth);
+          $('#layer2').css({
+            'width': layerWidth
+          })
+        });
+      });
+
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container" id="top" onselectstart="return false;">
+      <div id="parallax">
+
+        <div class="panel text1">
+          <div class="content">  
+            <p>Brother!</p>
+          </div>
+        </div>
+
+        <div class="panel text2">
+          <div class="content">  
+            <p>happy <span>birthday!</span></p>
+          </div>
+        </div>
+
+        <div class="panel text3">
+          <div class="content">  
+            <p>I'm so very <span>glad</span> you were born</p>
+          </div>
+        </div>
+
+        <div class="panel text4">
+          <div class="content">  
+            <p>I hope yours is a most <span>wonderful</span> birthday</p>
+          </div>
+        </div>
+
+        <div class="panel text5">
+          <div class="content">  
+            <p>your <span>adventures</span> are just beginning</p>
+          </div>
+        </div>
+
+        <div class="panel text6">
+          <div class="content">  
+            <p>they promise to be as daunting as they are <span>rewarding</span></p>
+          </div>
+        </div>
+
+        <div class="panel text7">
+          <div class="content">  
+            <p>so I offer again this <span>word</span> of advice:</p>
+          </div>
+        </div>
+
+        <div class="panel text8">
+          <div class="content">  
+            <p>who dares, <span>wins</span></p>
+          </div>
+        </div>
+
+        <div class="panel text9">
+          <div class="content">  
+            <p>here's to many more, <span>old friend</span></p>
+          </div>
+        </div>
+
+        <div class="panel text10">
+          <div class="content">  
+            <p>love, mike</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container" onselectstart="return false;">
+      <div id="layer2"></div>
+    </div>
+
+
+
+  </body>
+</html>

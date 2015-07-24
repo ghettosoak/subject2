@@ -1,0 +1,40 @@
+::selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white; }
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: Univers, Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.7rem;
+  color: #3C3C3F; }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: .85em;
+    line-height: 1.5rem; } }
+#master {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px; }
+
+p {
+  margin: 0px 0px 1rem; }
+
+#top .put, #middle .put, #bottom .put {
+  margin: auto;
+  max-width: 1024px;
+  height: 100%;
+  position: relative; }
+
+@-moz-document url-prefix() {}

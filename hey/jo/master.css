@@ -1,0 +1,177 @@
+::selection {
+  background-color: white;
+  color: black; }
+
+::-moz-selection {
+  background-color: white;
+  color: black; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: Georgia, serif;
+  font-size: .85em;
+  line-height: 1.6em;
+  color: #fff; }
+
+p {
+  margin: 0px 0px 1rem; }
+
+#master {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden; }
+
+#hold {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  display: table;
+  opacity: 0; }
+  #hold p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #444; }
+
+#switch {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  background-image: url(switch.svg);
+  background-size: 100px;
+  background-position: -50px 0px;
+  z-index: 100;
+  cursor: pointer; }
+
+#bg {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  height: 120%;
+  width: 120%;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  #bg div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+  #bg #clear {
+    background-image: url(clear.jpg); }
+  #bg #blur {
+    background-image: url(blur.jpg);
+    opacity: 0; }
+
+#content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2); }
+  #content > div {
+    overflow-x: hidden; }
+    #content > div .put {
+      height: 100%;
+      position: relative;
+      padding: 0px 20px; }
+  #content #top .put {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    border-bottom: 1px #fff solid; }
+    #content #top .put:after {
+      content: '';
+      width: 1000px;
+      height: 1px;
+      background-color: white;
+      position: absolute;
+      left: 100%;
+      top: 100%; }
+  #content #middle .put {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  #content #bottom .put {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.view #switch {
+  background-position: 0px 0px; }
+.view #bg {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%; }
+  .view #bg #blur {
+    opacity: 1; }
+.view #content {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
+
+.wait #switch, .wait #bg, .wait #content {
+  opacity: 0; }
+.wait #hold {
+  opacity: 1; }
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.1em;
+    line-height: 1.5em; }
+
+  #switch {
+    left: 0px;
+    right: inherit;
+    top: 50%;
+    margin-top: -25px; }
+
+  #content > div .put {
+    margin: auto;
+    max-width: 1024px;
+    border-left: 1px #fff solid;
+    margin: 0px 0px 0px 15%;
+    padding: 0px 20% 0px 5%; }
+  #content #top .put {
+    padding-top: 60px;
+    padding-bottom: 20px; }
+  #content #middle .put {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  #content #bottom .put {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+@-moz-document url-prefix() {}

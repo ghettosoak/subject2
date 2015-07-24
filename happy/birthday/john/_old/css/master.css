@@ -1,0 +1,83 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #e6fafa;
+  color: black;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto 0px auto;
+  padding: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: #e6e6e6;
+  overflow: hidden;
+}
+#parallax {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  position: absolute;
+  color: black;
+  height: 100%;
+  background-color: transparent;
+  cursor: move;
+  z-index: 4;
+}
+.panel {
+  position: relative;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  width: 900px;
+  height: 100%;
+  display: table;
+  background-color: transparent;
+  padding: 20px;
+}
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  border: 1px white solid;
+}
+#layer1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  position: absolute;
+  color: black;
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/spectral.png');
+  background-size: cover;
+  background-position: center center;
+  cursor: move;
+  z-index: 2;
+}
+#layer2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  position: absolute;
+  color: black;
+  height: 100%;
+  background-image: url('../images/stars_large.jpg');
+  background-size: cover;
+  background-position: center center;
+  cursor: move;
+  z-index: 1;
+}

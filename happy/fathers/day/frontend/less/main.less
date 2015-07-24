@@ -1,0 +1,182 @@
+// Vendor
+@import "vendor/bootstrap/bootstrap.less";
+
+// Core files
+@import "core/variables.less";
+// @import "core/mixins.less";
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body{
+	height:100%;
+	position: relative;
+	color: @color-copy;
+	font-family: @standard;
+	font-weight: @light;
+	font-size: @base-font-size;
+	line-height: @base-line-height;	
+}
+
+@font-face {
+    font-family: 'playfair';
+    src: url('../fonts/playfairdisplaysc/playfairdisplay-regular-webfont.eot');
+    src: url('../fonts/playfairdisplaysc/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/playfairdisplaysc/playfairdisplay-regular-webfont.woff') format('woff'),
+         url('../fonts/playfairdisplaysc/playfairdisplay-regular-webfont.ttf') format('truetype'),
+         url('../fonts/playfairdisplaysc/playfairdisplay-regular-webfont.svg#playfairdisplaysc-blackitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'karla';
+    src: url('../fonts/karla/karla-regular-webfont.eot');
+    src: url('../fonts/karla/karla-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/karla/karla-regular-webfont.woff') format('woff'),
+         url('../fonts/karla/karla-regular-webfont.ttf') format('truetype'),
+         url('../fonts/karla/karla-regular-webfont.svg#karla-regular-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#main{
+	height: 100%;
+}
+
+#bg{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	div{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+
+	}
+
+	#clean{
+		background-image: url(../img/bg_clean_3.jpg);
+	}
+
+	#blur{
+		background-image: url(../img/bg_blur_3.jpg);
+		opacity: 0;
+	}
+
+}
+
+#text{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+
+	.title{
+		height: 100vh;
+		width: 100%;
+		display: table;
+		position: relative;
+
+		&:after{
+			content: '';
+			background-image: url(../img/arrow.svg);
+			background-size: 30px 50px;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 30px;
+			height: 50px;
+			font-size: 70px;
+			bottom: 75px;
+			left: 50%;
+			margin-left: -15px;
+			color: white;
+			text-align: center;
+			opacity: 0;
+			.transition(all 1s @eio);
+
+			.loaded &{
+				opacity: 1;
+			}
+		}
+
+		h1{
+			display: table-cell;
+			vertical-align: middle;
+			font-family: playfair;
+			color: white;
+			text-align: center;
+
+			span{
+				padding: 20px;
+				border: 7px solid white;
+				display: inline-block;
+			}
+		}
+	}
+
+	.body{
+		padding: 20px 20px 200px;
+
+		@media screen and (min-width: 800px) {
+			text-align: center;
+		}
+		p{
+			
+			font-family: karla;
+			color: white;
+			margin: 0 0 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

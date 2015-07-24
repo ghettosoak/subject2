@@ -1,0 +1,98 @@
+@import url(../../carrier/type/alexbrush/stylesheet.css);
+::selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white; }
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: Univers, Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.7rem;
+  color: #3C3C3F; }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: .85em;
+    line-height: 1.5rem; } }
+#output {
+  position: fixed;
+  height: 50px;
+  width: 100px;
+  left: 0px;
+  top: 0px;
+  z-index: 100000; }
+
+body {
+  margin: 0px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden; }
+  body #master {
+    position: absolute;
+    height: 1400%;
+    width: 100%;
+    top: 0px;
+    left: 0px; }
+    body #master #english, body #master #duutsch {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      background-color: white;
+      overflow: hidden; }
+      body #master #english .inside, body #master #duutsch .inside {
+        background-color: white;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px; }
+        body #master #english .inside > div, body #master #duutsch .inside > div {
+          position: relative;
+          padding: 50px;
+          height: 7.14285%;
+          width: 100%;
+          display: table; }
+          body #master #english .inside > div p, body #master #duutsch .inside > div p {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center; }
+          body #master #english .inside > div img, body #master #duutsch .inside > div img {
+            position: absolute;
+            width: 50px;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -25px; }
+    body #master #english {
+      z-index: 2;
+      left: 0px; }
+    body #master #duutsch {
+      z-index: 1;
+      right: 0px; }
+  body #slider {
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 46px;
+    top: 0px;
+    left: 100%;
+    margin-left: -23px;
+    background-color: red;
+    background-image: url(grab.png);
+    background-size: 34px;
+    background-position: center center;
+    background-repeat: no-repeat; }
+
+@-moz-document url-prefix() {}
